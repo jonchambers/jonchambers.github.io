@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- main a-frame library -->
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+
+    <!-- physics library -->
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+
+    <!-- particle system library -->
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+    <!-- environment library -->
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+    <!-- text geometry library -->
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+
+    <!-- extras library -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+
+    <script src="a-frame-href.js"></script>
+
+  </head>
+  <body>
+    <a-scene cursor="rayOrigin: mouse">
+      <a-assets>
+        <img id="skyTexture" src="images/starmap.jpg">
+        <img id="io" src="images/io.jpg">
+        <img id="pluto" src="images/pluto.jpg">
+        <video id="city" autoplay loop="true" src="video/city.mp4"></video>
+        <video id="mountain" autoplay loop="true" src="video/mountain.mp4"></video>
+        <a-asset-item id="tower-obj" src="models/model.obj"></a-asset-item>
+        <a-asset-item id="tower-mtl" src="models/materials.mtl"></a-asset-item>
+        <a-asset-item id="tower-gltf" src="models/model.gltf"></a-asset-item>
+      </a-assets>
+
+
+      <a-entity
+      geometry="primitive: sphere"
+      radius="1;"
+      position="0 2.31 -8"
+      material="src: #io"
+      scale="2 2 2"
+      href="pluto.html">
+      </a-entity>
+
+
+
+      <a-sky src="#skyTexture"></a-sky>
+      <!-- <a-videosphere src="#mountain"></a-videosphere> -->
+    </a-scene>
+  </body>
+</html>
